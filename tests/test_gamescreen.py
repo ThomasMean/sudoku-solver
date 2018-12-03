@@ -6,8 +6,8 @@ gamescreen = imp.load_source("gamescreen","gamescreen.py")
 def test_Render():
     assert gamescreen.render(renderInput) == expectedRenderResult;
 
-# def testRenderWithNones():
-#     assert gamescreen.render(renderInput) == expectedNRenderResultWithNones;
+def testRenderWithNones():
+    assert gamescreen.render(renderWithNonesInput) == expectedNRenderResultWithNones;
 
 expectedRenderResult ="1|2|3|4|5|6|7|8|9\n" \
     "2|3|4|5|6|7|8|9|1\n" \
