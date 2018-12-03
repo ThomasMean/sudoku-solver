@@ -33,6 +33,12 @@ def test_getMoveCheck_successful():
 def test_getMoveCheck_fail():
     assert gamestate.getMoveCheck([0,0], newState) == None
 
+def test_gameFinished_true():
+    assert gamestate.gameFinished(newState) == True;
+
+def test_gameFinished_false():
+    assert gamestate.gameFinished(firstState) == False;
+
 def test_add_fail():
     assert gamestate.add(2, [0,0], firstState) == firstState
 
