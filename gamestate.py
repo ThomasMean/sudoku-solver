@@ -28,9 +28,9 @@ def checkSquare(input, position, state):
     return True
 
 def getSquareValues(input):
-    if (input in range(2)):
+    if (input in range(3)):
         return [0,1,2]
-    if (input in range(3,5)):
+    if (input in range(3,6)):
         return [3,4,5]
     return [6,7,8]
 
