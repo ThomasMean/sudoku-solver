@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="1" failures="0" name="pytest" skips="0" tests="1" time="0.100"><testcase classname="" file="tests/__init.__.py" name="tests.__init.__" time="0"><error message="collection failure">..\..\..\..\appdata\local\programs\python\python37\lib\site-packages\py\_path\local.py:668: in pyimport
+    __import__(modname)
+E   ModuleNotFoundError: No module named &apos;__init&apos;</error></testcase></testsuite>
