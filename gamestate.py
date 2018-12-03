@@ -33,3 +33,12 @@ def getSquareValues(input):
     if (input in range(3,5)):
         return [3,4,5]
     return [6,7,8]
+
+def getMoveCheck(position, state):
+    move = []
+    for input in range(1,10):
+        if validMove(input, position, state):
+            move.append(input)
+    if (len(move) != 1):
+        return None
+    return move[0]

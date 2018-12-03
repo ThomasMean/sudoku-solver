@@ -27,11 +27,19 @@ def test_checkSquare_isValid():
 def test_checkSquare_isInvalid():
     assert gamestate.checkSquare(2, [0,0], firstState) == False
 
-def test_add_successful():
-    assert gamestate.add(1, [0,0], firstState) == newState
+def test_getMoveCheck_successful():
+    assert gamestate.getMoveCheck([0,0], firstState) == 1
+
+def test_getMoveCheck_fail():
+    assert gamestate.getMoveCheck([0,0], newState) == None
 
 def test_add_fail():
     assert gamestate.add(2, [0,0], firstState) == firstState
+
+def test_add_successful():
+    assert gamestate.add(1, [0,0], firstState) == newState
+
+
 
 firstState = [[None,2,3,4,5,6,7,8,9],[2,3,4,5,6,7,8,9,1],[3,4,5,6,7,8,9,1,2],[4,5,6,7,8,9,1,2,3],[5,6,7,8,9,1,2,3,4],[6,7,8,9,1,2,3,4,5],[7,8,9,1,2,3,4,5,6],[8,9,1,2,3,4,5,6,7],[9,1,2,3,4,5,6,7,8]]
 newState = [[1,2,3,4,5,6,7,8,9],[2,3,4,5,6,7,8,9,1],[3,4,5,6,7,8,9,1,2],[4,5,6,7,8,9,1,2,3],[5,6,7,8,9,1,2,3,4],[6,7,8,9,1,2,3,4,5],[7,8,9,1,2,3,4,5,6],[8,9,1,2,3,4,5,6,7],[9,1,2,3,4,5,6,7,8]]
