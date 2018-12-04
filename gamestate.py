@@ -42,10 +42,3 @@ def getMoveCheck(position, state):
     if (len(move) != 1):
         return None
     return move[0]
-
-def gameFinished(state):
-    for xValue in range(8):
-        for yValue in range(8):
-            if (state[xValue][yValue] is None):
-                return False
-    return True

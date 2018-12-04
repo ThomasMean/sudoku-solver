@@ -1,11 +1,29 @@
 import imp
 play = imp.load_source("play","play.py")
 
+def test_loadEmpty_complete():
+    assert play.loadEmpty(completeState) == []
+
+def test_loadEmpty():
+    assert play.loadEmpty(firstState) == [[0,0]]
+
+def test_gameFinished_true():
+    assert play.gameFinished(completeState) == True
+
+def test_gameFinished_false():
+    assert play.gameFinished(firstState) == False
+
 def test_checkMove_successful():
-    assert play.checkMove(0,0,firstState) == completeState
+    assert play.checkMove(0,0,firstState) == 1
 
 def test_checkMove_fail():
-    assert play.checkMove(0,1,firstState) == firstState
+    assert play.checkMove(0,1,firstState) == None
+
+def test_makeMove_successful():
+    assert play.makeMove(1,0,0,firstState) == completeState
+
+def test_makeMove_fail():
+    assert play.makeMove(1,0,1,firstState) == firstState
 
 def test_CompleteGame():
     assert play.completeGame(firstState) == completeState
